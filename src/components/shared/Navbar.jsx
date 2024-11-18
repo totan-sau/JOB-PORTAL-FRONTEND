@@ -16,9 +16,7 @@ function Navbar() {
     const navigate = useNavigate();
     const logoutHandler = async () => {
         try {
-            const res = await axios.post(`${USER_API_END_POINT}/logout`, {
-                withCredentials: true
-            });
+            const res = await axios.post(`${USER_API_END_POINT}/logout`, {});
 
             if (res.data.success) {
                 dispatch(setUser(null));

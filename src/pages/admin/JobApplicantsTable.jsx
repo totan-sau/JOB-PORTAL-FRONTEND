@@ -13,9 +13,7 @@ function JobApplicantsTable() {
 
   const statusHandler = async (status, id) => {
     try {
-      const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`, {status}, {
-        withCredentials: true
-      });
+      const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`, {status}, {});
       if(res.data.success) {
         toast.success(res.data.message);
       }

@@ -57,8 +57,7 @@ function UpdateProfileDialog({ open, setOpen }) {
             const res = await axios.post(`${USER_API_END_POINT}/profile/update`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
-                },
-                withCredentials: true
+                }
             });
 
             if (res.data.success) {
